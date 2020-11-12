@@ -14,6 +14,12 @@ Valid Login
     Click Element                       id:login-button
     Wait Until Page Contains            Products
 
+Add Jacket To Cart
+    Click Element                       xpath: //*[contains(text(), "Sauce Labs Fleece Jacket")]
+    Page Should Contain                 Sauce Labs Fleece Jacket
+    Click Element                       xpath: //*[contains(text(), "ADD TO CART")]
+    Click Element                       class:shopping_cart_link
+
 *** Keywords ***
 Open Browser To Login Page
     Open Browser        ${URL}  ${BROWSER}
